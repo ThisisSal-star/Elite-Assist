@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Your VA Business | Executive Support, General VA & Lead Generation
+    </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        background: #f8f9fb;
+        color: #222;
+      }
+
+      header {
+        background: #1f3c88;
+        color: white;
+        padding: 20px 8%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      nav h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #ffd166;
+      }
+
+      .hero {
+        background:
+          linear-gradient(rgba(31, 60, 136, 0.85), rgba(31, 60, 136, 0.85)),
+          url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80")
+            center/cover no-repeat;
+        color: white;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        padding: 0 8%;
+      }
+
+      .hero-content {
+        max-width: 700px;
+      }
+
+      .hero h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: #ffd166;
+        color: #222;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #ffbf3f;
+      }
+
+      section {
+        padding: 70px 8%;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        color: #1f3c88;
+        margin-bottom: 40px;
+      }
+
+      .about p {
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+        font-size: 1.05rem;
+      }
+
+      .services-grid,
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+      }
+
+      .card h3 {
+        color: #1f3c88;
+        margin-bottom: 15px;
+      }
+
+      .card ul {
+        padding-left: 20px;
+      }
+
+      .card ul li {
+        margin-bottom: 10px;
+      }
+
+      .highlight {
+        background: #eef4ff;
+        border-left: 5px solid #1f3c88;
+        padding: 25px;
+        border-radius: 10px;
+        max-width: 950px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .package-price {
+        font-size: 1.8rem;
+        color: #1f3c88;
+        margin: 15px 0;
+        font-weight: bold;
+      }
+
+      .contact-container {
+        max-width: 700px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      form input,
+      form textarea,
+      form button {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+
+      form textarea {
+        min-height: 140px;
+        resize: vertical;
+      }
+
+      form button {
+        background: #1f3c88;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      form button:hover {
+        background: #162d66;
+      }
+
+      .success-message {
+        display: none;
+        margin-top: 10px;
+        color: green;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      footer {
+        background: #1f3c88;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 2.2rem;
+        }
+
+        nav {
+          gap: 15px;
+        }
+
+        nav ul {
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Elite Assist</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Executive Support, General VA & Lead Generation Services</h2>
+        <p>
+          I help busy entrepreneurs, executives, and growing businesses stay
+          organized, save time, and attract more clients through reliable
+          virtual support.
+        </p>
+        <a href="#contact" class="btn">Book a Free Consultation</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I provide professional virtual assistance services designed to support
+        business owners, executives, and growing teams. From executive support
+        and general administrative tasks to lead generation and client
+        follow-up, I help businesses run smoothly and grow with confidence.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">My Services</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3>Executive Support</h3>
+          <ul>
+            <li>Calendar management</li>
+            <li>Email and inbox management</li>
+            <li>Travel planning</li>
+            <li>Meeting scheduling</li>
+            <li>Document preparation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>General VA Support</h3>
+          <ul>
+            <li>Data entry</li>
+            <li>Internet research</li>
+            <li>File organization</li>
+            <li>Scheduling and coordination</li>
+            <li>Basic social media support</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Lead Generation</h3>
+          <ul>
+            <li>Prospect research</li>
+            <li>LinkedIn outreach</li>
+            <li>Email outreach support</li>
+            <li>CRM updates</li>
+            <li>Appointment setting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="highlight">
+        <h2 style="margin-bottom: 15px; color: #1f3c88">Why Work With Me?</h2>
+        <p>
+          I don’t just help you stay organized , I help you create more time,
+          improve daily operations, and support your business growth through
+          efficient systems and dependable client support.
+        </p>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2 class="section-title">Service Packages</h2>
+      <div class="packages-grid">
+        <div class="card">
+          <h3>Starter Package</h3>
+          <p class="package-price">$250</p>
+          <ul>
+            <li>10 hours monthly support</li>
+            <li>General administrative tasks</li>
+            <li>Email and scheduling support</li>
+            <li>Basic research assistance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Growth Package</h3>
+          <p class="package-price">$500</p>
+          <ul>
+            <li>20 hours monthly support</li>
+            <li>Executive support tasks</li>
+            <li>General VA assistance</li>
+            <li>Client follow-up support</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Premium Package</h3>
+          <p class="package-price">$900</p>
+          <ul>
+            <li>40 hours monthly support</li>
+            <li>Executive support</li>
+            <li>General VA support</li>
+            <li>Lead generation assistance</li>
+            <li>CRM and appointment setting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-container">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea
+            id="message"
+            placeholder="Tell me about the support you need..."
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+          <p class="success-message" id="successMessage">
+            Thank you! Your message has been sent.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Elite Assist . All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Smooth scroll for nav links
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Fake form submission message
+      const contactForm = document.getElementById("contactForm");
+      const successMessage = document.getElementById("successMessage");
+
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name && email && message) {
+          successMessage.style.display = "block";
+          contactForm.reset();
+
+          setTimeout(() => {
+            successMessage.style.display = "none";
+          }, 4000);
+        }
+      });
+    </script>
+  </body>
+</html>
